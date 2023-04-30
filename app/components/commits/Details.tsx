@@ -28,7 +28,7 @@ const CommitDetails: React.FC<CommitDetailsProps> = ({ data }) => {
                         </p>
                         <div className="flex flex-row text-sm">
                             <span className="mr-3">
-                                <img className='max-w-[8%]' src={data.author.avatar_url} />
+                                <img className='max-w-[8%] shadow-md border-2 border-[#117caf] rounded-full' src={data.author.avatar_url} />
                             </span>
                         </div>
 
