@@ -14,6 +14,10 @@ interface CommitDetailsProps {
 
 const CommitDetails: React.FC<CommitDetailsProps> = ({ data }) => {
 
+    const dateToLocalString = (originDate: string): string => {
+        return new Date(originDate).toLocaleDateString('es-CL') + " " + new Date(originDate).toLocaleTimeString('es-CL');
+    }
+
     return (
         <div className="flex flex-col border rounded-lg overflow-hidden bg-white">
             <div className="grid grid-cols-1 sm:grid-cols-4">
@@ -22,6 +26,12 @@ const CommitDetails: React.FC<CommitDetailsProps> = ({ data }) => {
                         <p className="text-2xl font-bold text-[#117caf] rounded-full">
                             {data.commit.message}
                         </p>
+                        <div className="flex flex-row text-sm">
+                            <span className="mr-3">
+                                <img className='max-w-[8%]' src={data.author.avatar_url} />
+                            </span>
+                        </div>
+
                         <div className="flex flex-row text-sm">
                             <span className="mr-3">
                                 <BiRename />
@@ -38,7 +48,7 @@ const CommitDetails: React.FC<CommitDetailsProps> = ({ data }) => {
                             </span>
                             <p className="flex items-center  text-gray-500">
                                 <span className="font-semibold mr-2 text-xs uppercase">Date:</span>
-                                <span>{data.commit.author.date}</span>
+                                <span>{dateToLocalString(data.commit.author.date)}</span>
                             </p>
                         </div>
                         <div className="flex flex-row text-sm">
