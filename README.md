@@ -6,6 +6,8 @@ This project allows you to visualize the commits of a GitHub repository, using t
 
 ![App Preview](https://i.imgur.com/NtQ4PJw.png "App Preview")
 
+This project was created using ```create-next-app```
+
 ## Features
 
 - Responsive design
@@ -13,6 +15,10 @@ This project allows you to visualize the commits of a GitHub repository, using t
 - List al your commits
 - Use it in any repository you have access to
 - Easy deployment
+
+## System Requirements
+- Node.js 16.8.0 or newer
+- MacOS, Windows (including WSL), and Linux are supported
 
 ## Getting Started
 
